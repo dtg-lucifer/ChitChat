@@ -1,0 +1,133 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #F7F7F7;
+}
+
+.wrapper {
+    background-color: #fff;
+    width: 450px;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 15px -4px rgba(0,0,0,1);
+}
+
+.form {
+    padding: 1.5rem 2rem;
+}
+
+.form header {
+    font-size: 25px;
+    font-weight: 600;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.form form {
+    margin: 1.3rem 0;
+}
+
+.form form i {
+    position: absolute;
+    right: 5%;
+    top: 66%;
+    font-size: 15px;
+    cursor: pointer;
+    color: rgb(0 0 0 /.4);
+    transition: color .15s;
+}
+
+.form form i.active::before {
+    content: "\f070";
+    color: #1E40AF;
+}
+
+.form form i:hover {
+    animation: wiggle .15s;
+    color: rgb(0 0 0 /.9);
+}
+
+.form form .err__text {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: .6rem 1rem;
+    border-radius: .4rem;
+    margin: 10px 0;
+    display: none;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.form form .name__details {
+    display: flex;
+    gap: 1rem;
+}
+
+.form form .field:not(.profile__image) {
+    display: flex;
+    flex-direction: column;
+}
+
+.form form .field {
+    margin: 10px 0;
+}
+
+.form form .link {
+    text-align: center;
+    font-size: 14px;
+}
+
+.form form input:focus {
+    outline: none;
+}
+
+.form form input:not(.exclude) {
+    height: 3rem;
+    width: 100%;
+    padding: 1rem;
+    font-size: 14px;
+    border-radius: .4rem;
+    /* border: 1px solid #42a5f5; */
+    border: none;
+    background-color: #bbdefb;
+}
+
+.form form input[name="profile__image"] {
+    padding: 1rem;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.form form #password {
+    position: relative;
+}
+
+.form form input[type="submit"] {
+    padding: 10px 0;
+    font-size: 15px;
+    font-weight: 500;
+    background-color: #42a5f5;
+    border: none;
+    border-radius: .4rem;
+    transition: background-color .15s;
+}
+
+.form form input[type="submit"]:hover {
+    cursor: pointer;
+    background-color: #2196f3;
+}
+
+.form form label {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 5px 0;
+}
+@keyframes wiggle {
+    50% {
+        transform: rotateZ(45deg);
+    } 100% {
+        transform: rotateZ(-45deg);
+    }
+}
